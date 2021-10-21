@@ -7,13 +7,14 @@ public class Main4 {
         // Задача 1
         int i = 1;
         while (i <= 10) {
-        System.out.print(i + " ");
-        i++;
+            System.out.print(i + " ");
+            i++;
         }
         System.out.println();
 
-        for (i = 10; i > 0; i--)
+        for (i = 10; i > 0; i--) {
             System.out.print(i + " ");
+        }
         System.out.println();
 
 
@@ -34,16 +35,5 @@ public class Main4 {
                 System.out.println(" Комета прилетала каждый " + a + " год.");
             }
         }
-
-
-
-        }
-
-        }
-
-
-
-
-
-
-
+    }
+}
