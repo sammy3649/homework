@@ -1,29 +1,37 @@
 package ru.skypro.java.course1.Lesson8;
 
 public class Book {
-    private final String name;
+
+    private final Author author;
     public int yearPublishing;
     private final String bookName;
 
-    public Book(String name, int yearPublishing, String bookName) {
-        this.name = name;
+    public Book (Author author, int yearPublishing, String bookName) {
+        this.author = author;
         this.yearPublishing = yearPublishing;
         this.bookName = bookName;
     }
 
-    public String getName() {
-        return this.name;
+    public Author getAuthor() {
+        return author;
     }
 
     public int getYearPublishing() {
-        return this.yearPublishing;
+        return yearPublishing;
     }
 
     public String getBookName() {
-        return this.bookName;
+        return bookName;
     }
 
     public void setYearPublishing(int yearPublishing) {
         this.yearPublishing = yearPublishing;
+    }
+    @Override
+    public String toString() {
+        return "Book{" +
+                "yearPublishing='" + yearPublishing + '\'' +
+                ", bookName='" + bookName + '\'' +
+                ", author='" + author + '\'';
     }
 }
