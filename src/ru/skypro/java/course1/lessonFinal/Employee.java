@@ -1,20 +1,21 @@
 package ru.skypro.java.course1.lessonFinal;
 
 public class Employee {
-    private String fullName;
+    private final String fullName;
     private int department;
     private int salary;
-    private static int id = 0;
+    private final int id;
+    private static int idCounter;
 
     public Employee(String fullName, int department, int salary) {
-        id++;
         this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.id = id;
+        this.id = idCounter++;
+
     }
 
-    public String getFullName() {
+    public final String getFullName() {
         return fullName;
     }
 
@@ -26,9 +27,6 @@ public class Employee {
         return salary;
     }
 
-    public static int getId() {
-        return id;
-    }
 
     public void setDepartment(int department) {
         this.department = department;
@@ -36,17 +34,6 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
-    }
-
-    public static boolean addEmployee(Employee[] employees, Employee newEmployee) {
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] == null) {
-                employees[i] = newEmployee;
-                return true;
-            }
-
-        }
-        return false;
     }
 
     @Override
@@ -58,3 +45,4 @@ public class Employee {
                 '}';
     }
 }
+
