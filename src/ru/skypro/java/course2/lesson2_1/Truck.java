@@ -11,6 +11,7 @@ public class Truck extends Car {
     @Override
     public void service() {
         super.service();
+        checkTrailer();
     }
 
     @Override
